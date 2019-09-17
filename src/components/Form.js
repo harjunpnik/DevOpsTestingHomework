@@ -5,13 +5,13 @@ const Form = ({onSubmit, nameValue, handleNameChange, numberValue, handleNumberC
     return(
         <form onSubmit={onSubmit}>
             <div>Name: 
-            <input
+            <input className="nameInput"
                 value={nameValue}
                 onChange={handleNameChange}
             />
             </div>
             <div>Number: 
-            <input
+            <input className="numberInput"
                 value={numberValue}
                 onChange={handleNumberChange}
             />

@@ -3,7 +3,7 @@ import React from 'react'
 const Header = ({header}) => {
 
     return(
-        <header.size className='HeaderClass'>{header.text}</header.size>
+        <header.size>{header.text}</header.size>
     )
 }
 
