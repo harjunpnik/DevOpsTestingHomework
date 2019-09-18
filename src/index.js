@@ -7,14 +7,16 @@ import Form from './components/Form'
 const App = () => {
     const [ newName, setNewName ] = useState('')
     const [ newNumber, setNewNumber ] = useState('')
+    const [submitted, setSubmitted] = useState(false)
 
-    const showPerson = (event) => {
+    const onSubmit = (event) => {
         event.preventDefault()
 
         window.alert(newName + " with number " + newNumber +  " has been added")
 
         setNewName('')
         setNewNumber('')
+        setSubmitted(true)
     }
 
     const handleNameChange = (event) => {
@@ -34,7 +36,7 @@ const App = () => {
         <Header header={{text: "This header is h3" , size: "h3"}}/>
         
         <Form
-        onSubmit={showPerson} 
+        onSubmit={onSubmit} 
         nameValue={newName} 
         handleNameChange={handleNameChange} 
         numberValue={newNumber} 

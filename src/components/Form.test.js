@@ -27,7 +27,7 @@ const Wrapper = (props) => {
 
 describe('Form Tests', () => {
 
-    test('onsubmit test', () => {
+    test('onsubmit test valid data', () => {
 
         const onSubmit = jest.fn()
         const state = {
@@ -53,5 +53,4 @@ describe('Form Tests', () => {
         expect(state.nameValue).toBe('Börje Svensson')  
 
     })
-
 })
